@@ -1,9 +1,13 @@
 class CategoriesController < Sinatra::Base
+
     get '/categories' do
-        "Category Index"
-      end
+      categories = Category.all
+      categories.to_json
+    end
+
+    get '/categories/:id' do
+      category = Category.find(params[:id])
+      category.to_json
+    end
     
-      get '/categories/:id' do
-        "Category #{params[:id]} Show"
-      end
 end
