@@ -34,7 +34,7 @@ end
 #process job edit
 post '/jobs/:job_slug' do
     @job = Job.find_by_slug(params[:job_slug])
-    if !params[:job][:title].empty? && !params[:job][:content].empty? && !params[:job][:deadline].empty? 
+    if !params[:job][:title].empty? && !params[:job][:description].empty? && !params[:job][:deadline].empty? 
       @job.update(params[:job])
 
       if !params[:category][:name].empty? && !params[:category][:description].empty?
