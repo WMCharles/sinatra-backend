@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class JobsController < ApplicationController
 
     #process job creation
   post '/jobs' do
