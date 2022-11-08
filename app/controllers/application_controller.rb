@@ -3,7 +3,7 @@ require './config/environment'
 class ApplicationController < Sinatra::Base
  #homepage - shows all posts
  get '/' do
-    @posts = Post.all
+    @jobs = Job.all
     erb :index
   end  
      
